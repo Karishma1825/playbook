@@ -1,0 +1,11 @@
+---
+ - name: playbook for line.yml
+   hosts: EE1.hsilab.com
+   tasks:
+    - group:
+       name: webdev
+    - file: 
+       state: directory
+       path: /webdev
+       mode: 02775
+       group: webdev

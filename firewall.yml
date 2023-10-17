@@ -1,0 +1,9 @@
+---
+ - name: firewall disabled
+   hosts: EE1.hsilab.com
+   become: false        
+   tasks:
+    - name: enabled the firewalld
+      firewalld:
+       state: disabled
+   tags: enable_firewall
