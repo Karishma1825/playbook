@@ -1,0 +1,11 @@
+---
+ - name: run the date command on remotehost
+   hosts: EE1.hsilab.com
+   tasks:
+    - name: get the current date
+      command: date
+      register: current_date
+    - name: display the current date
+      debug:
+       var: current_date.stdout
+
