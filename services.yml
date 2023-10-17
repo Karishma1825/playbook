@@ -1,0 +1,14 @@
+---
+- name: Manage HTTPD Service
+  hosts: ee1.hsilab.com
+  tasks:
+   - name: install apache server
+     yum:
+      name: apache
+      state: present
+    - name: Ensure httpd service is started and enabled
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+

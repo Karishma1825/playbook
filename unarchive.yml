@@ -1,0 +1,9 @@
+---
+ - name: playbook unarchive
+   hosts: EE1.hsilab.com
+   tasks:
+    - name: Extract contents of app.tar.gz
+      unarchive:
+       src: /tmp/app.tar.gz
+       dest: /app
+       remote_src: yes

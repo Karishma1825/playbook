@@ -1,0 +1,11 @@
+---
+ - name: create templates
+   hosts: EE1.hsilab.com
+   tasks:
+    - name: Ensure MOTD file is in place
+      template:
+       src: motd.j2
+       dest: /etc/motd
+       owner: root
+       group: root
+       mode: 0644

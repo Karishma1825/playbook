@@ -1,0 +1,15 @@
+---
+ - name: creates users
+   hosts: 192.168.101.26
+   become: false
+   vars:
+    - name:
+       - ram
+       - sita
+   tasks:
+    - name: create user
+      user:
+       name: "{{ item }}"
+       state: present
+       password: Hitachi@123
+
