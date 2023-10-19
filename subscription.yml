@@ -1,0 +1,13 @@
+---
+- name: subscribe server
+  hosts: sub.com
+  become: yes
+  tasks:
+  - name: Register as a user with password
+    community.general.redhat_subscription:
+              state: present
+              username: Pournima.Makasare
+              password: Welcome@2019
+              auto_attech: true
+
+
