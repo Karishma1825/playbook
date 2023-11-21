@@ -1,0 +1,7 @@
+---
+- name: stop service httpd
+  hosts: ee1.hsilab.com
+  tasks: 
+    - name: stop service httpd
+      service: 
+

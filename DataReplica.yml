@@ -1,0 +1,11 @@
+---
+- name: Create SVM
+  netapp.ontap.na_ontap_svm:
+    state: present
+    name: ansibleVServer
+    root_volume: vol1
+    root_volume_aggregate: aggr1
+    root_volume_security_style: mixed
+    hostname: "{{192.168.100.53}}"
+    username: "{{Ansible}}"
+    password: "{{Hitachi@123}}"

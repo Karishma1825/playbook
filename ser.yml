@@ -1,0 +1,9 @@
+---
+- hosts: ee1.hsilab.com
+  tasks:
+  - name: Package installation
+    dnf:
+      name:
+              - httpd
+
+      state: latest
